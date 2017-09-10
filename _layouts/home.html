@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  <body>
+  {% include svg.html %}
+
+    <div class="page-content">
+      <div class="page-wrap" id="page">
+
+      {% include header.html %}
+      <main id="content">
+        <div class="banner-image">
+          <img src="images/home-banner-image.jpg" alt="RGPs famous wraps in the oven">
+          <div class="banner-info-box">
+            <div class="left">
+              <h2>open</h2>
+              <h3>m-f | 11am-5pm</h3>
+            </div>
+            <div class="right">
+              <h2>Famous</h2>
+              <h3>For our flame grilled wraps.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="home-quote">
+          <p>We make delicious wraps with a pizza dough crust.  Yep! Some more text, I don't really know what to say other than this!!!!!!!</p>
+        </div>
+
+        {% include home/menu.html %}
+        {% include home/block1.html %}
+
+        {% include home/menu.html %}
+
+      </main>
+
+        {% include footer.html %}
+      </div>
+    </div>
+
+  </body>
+
+</html>
