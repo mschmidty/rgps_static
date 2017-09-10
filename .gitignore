@@ -4,8 +4,3 @@ _site
 node_modules
 **/.sass-cache
 **/.sass-cache/*
-
-#Blocked because they will build from source
-/images
-/css
-/js
