@@ -1,0 +1,50 @@
+.header-component {
+  position:relative;
+  display:block;
+  margin-top:0;
+  padding:0 1em;
+}
+.home-header {
+  transform: rotate(90deg);
+  position:absolute;
+  top:48px;
+  left:-40px;
+  margin:0;
+  padding:0;
+  line-height:1em;
+
+  @include bp(small) {
+    transform:none;
+    position:relative;
+    top:auto;
+    left:auto;
+    text-align:center;
+    width:100%;
+    margin:0.5em 0 0 0;
+  }
+}
+
+hr {
+  height:3.5px;
+  background:#000;
+  border:none;
+  position:relative;
+  display:block;
+  margin:0 2px;
+
+}
+
+.content-area {
+  margin:0 0 3em 6.5em;
+
+  @include bp(small) {
+    margin:5px;
+    h2 {
+      margin:1em 0 0 0;
+      text-align:left;
+    }
+  }
+  h2 {
+    margin-top:0.75em;
+  }
+}

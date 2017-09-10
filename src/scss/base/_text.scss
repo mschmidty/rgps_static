@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'langdonregular';
+    src:url('langdon-webfont.svg#langdonregular') format('svg'),
+        url('/font/langdon-webfont.woff2') format('woff2'),
+        url('/font/langdon-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+body {
+  font-family:'langdonregular';
+}
+
+@mixin langdon-shadow($shadow1, $shadow2, $color1, $color2, $space) {
+  text-transform:uppercase;
+  text-shadow:
+      -$shadow1 $shadow1 0px $color1,
+      -$shadow2 $shadow2 0px $color2;
+  letter-spacing:$space;
+}
+
+p {
+  font-family:'Source Sans Pro', sans-serif;
+  font-size:20px;
+  line-height:1.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform:uppercase;
+  margin:1em 0 0.5em 0;
+}
+
+h2, h3, h4, h5, h6 {
+  letter-spacing:1px;
+}
+
+h1 {
+  font-size:5.5em;
+  @include langdon-shadow(1px, 4px, $white, $black, 3px);
+
+}
+
+h2 {
+  font-size:4em;
+}
+
+h3 {
+  font-size:3em;
+}
+
+h4 {
+  font-size:2em;
+}
+
+h5 {
+  font-size:1.7em;
+}
+
+h6 {
+  font-size:1.4em;
+}

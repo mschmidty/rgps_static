@@ -1,0 +1,82 @@
+.banner-image {
+  position:relative;
+  img {
+    width:100%;
+    height:auto;
+    display:block;
+    margin:0;
+    padding:0;
+  }
+
+
+}
+.banner-info-box {
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  text-align:center;
+  h2 {
+    font-size:100px;
+    margin:0.25em 0;
+  }
+  h3 {
+    font-size:40px;
+    margin:0 0 0.25em 0;
+  }
+  .left, .right {
+    flex-basis:50%;
+  }
+  .left {
+    background:rgba(255,255,255,0.5);
+
+    h2{
+      @include langdon-shadow(1px, 4px, $white, $black, 3px);
+    }
+  }
+  .right {
+    background: rgba(0,0,0,0.5);
+    color:$white;
+    h2 {
+      @include langdon-shadow(1px, 4px, $black, $white, 3px);
+    }
+  }
+  @include bp(small){
+    position:relative;
+    padding:1em 0;
+    background:$black;
+    .right, .left {
+      background:$black;
+      color:$white;
+      h2{
+        @include langdon-shadow(1px, 2px, $black, $white, 3px);
+        font-size:40px;
+      }
+      h3 {
+        font-size:15px;
+      }
+    }
+    .left {
+      border-right:2px solid $white;
+    }
+  }
+}
+
+.home-quote {
+  max-width:700px;
+  font-style: italic;
+  color:$light-grey;
+  text-align:center;
+  width:100%;
+  margin:0 auto;
+  padding:3em 0 2em 0;
+  p {
+    font-size:1.4em;
+    line-height:1.5em;
+  }
+}
+
+@import "menu";
+@import "header-component";
+@import "block-component";

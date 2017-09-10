@@ -1,0 +1,52 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+html, body {
+  margin:0;
+  padding:0;
+}
+
+html {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+
+
+//Hides all SVG icons until they are called in the html
+body>svg {
+  height:0;
+  width:0;
+  margin:0;
+  padding:0;
+  position:absolute;
+  left:-999px;
+  top:-9999px;
+}
+
+@mixin bp($point) {
+
+  $bp-small: "(max-width: 700px)";
+  $bp-medium: "(max-width: 1250px)";
+  $bp-large: "(max-width: 1600px)";
+
+  @if $point == large {
+    @media #{$bp-large} { @content; }
+  }
+  @else if $point == medium {
+    @media #{$bp-medium} { @content; }
+  }
+  @else if $point == small {
+    @media #{$bp-small}  { @content; }
+  }
+}
+
+
+@import "add/normalize";
+@import 'base/color';
+@import 'base/text';
+
+@import 'shared/header';
+@import 'shared/footer';
+
+@import 'home/home';

@@ -1,0 +1,175 @@
+header {
+  width:100%;
+  background:$white;
+  position:relative;
+  border-bottom:3px solid $black;
+}
+
+.logo-header {
+  width:140px;
+  img {
+    width:100%;
+  }
+}
+
+.site-header {
+  display:flex;
+  justify-content:space-between;
+  padding:1em 1em;
+}
+
+header {
+  width:100%;
+  padding:0.5em 1em;
+}
+
+.logo-header {
+  margin:0;
+
+  a {
+  text-decoration:none;
+  color:$black;
+  }
+  a:visited {
+    color:black;
+  }
+}
+
+
+
+.main-navigation {
+  align-self:flex-end;
+  text-transform:uppercase;
+  z-index:100;
+  background:$white;
+  ul {
+    list-style-type:none;
+    margin-bottom:0;
+  }
+  li {
+    display:inline-block;
+    padding:0 0.7em 0 0.7em;
+    &:last-of-type {
+      padding-right:0;
+    }
+  }
+
+  a {
+    text-decoration:none;
+    color:$black;
+    font-size:22px;
+    &:hover {
+      color:$blue;
+    }
+  }
+
+  .children {
+    display:none;
+  }
+
+}
+img {
+  width:100%;
+}
+// Begin Navigation to copy to theme
+
+
+
+.sub-menu {
+  display:none;
+}
+
+.toggle-nav {
+  display:none;
+}
+
+.mobile-nav-header, .close-toggle {
+  display:none;
+}
+
+//should be 550px larger for testing
+@media all and (max-width:750px) {
+  .main-navigation li{
+    padding:0;
+  }
+  .site-header {
+    justify-content:flex-start;
+    flex-direction:row;
+    align-items:center;
+    padding:0.5em 0;
+  }
+  a.toggle-nav {
+    display:block;
+    margin:0;
+    padding:0;
+    height:40px;
+    width:40px;
+    position:absolute;
+    top:0.7em;
+    left:0.5em;
+  }
+
+  .logo-header {
+    margin:0 auto;
+    width:120px;
+  }
+  .mobile-nav-header, .close-toggle {
+    display:block;
+  }
+  .mobile-nav-header {
+    text-align:center;
+  }
+  a.close-toggle {
+    font-size:1em;
+    color:$blue;
+    text-decoration:underline;
+  }
+  .menu-nav-container {
+    transition:left 2s ease;
+    position:absolute;
+    top:0;
+    left:-150%;
+    background:$white;
+    padding:2em;
+    box-shadow: 4px 0px 20px 0px rgba(0,0,0,0.75);
+    height:100%;
+
+    ul {
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+    }
+    li {
+      flex-basis:50%;
+      display:block;
+      text-align:center;
+      border-right:1px solid #ccc;
+      border-bottom:1px solid #ccc;
+      &:nth-of-type(2n){
+        border-right:none;
+      }
+      &:nth-last-of-type(-n+2){
+        border-bottom:none;
+      }
+    }
+    .menu-item a {
+      display:block;
+      padding:2em 0;
+      margin:0;
+      &:hover {
+        background:#f0f0f0;
+      }
+    }
+
+  }
+  .toggle-open {
+    position:fixed;
+    left:0px;
+    height:100%;
+    width:100%;
+    overflow:scroll;
+  }
+
+}
